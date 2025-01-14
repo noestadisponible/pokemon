@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="pokedex">
+    <h2>Pokedex</h2>
+    <p>Discover detailed information about every Pokémon, including their types, abilities, and evolutions.</p>
+    <div class="pokedex-grid">
+        <!-- Example entry -->
+        <div class="pokemon-card">
+            <img src="/static/images/pikachu.png" alt="Pikachu" class="pokemon-image">
+            <h3>Pikachu</h3>
+            <p>Type: Electric</p>
+            <p>Abilities: Static, Lightning Rod</p>
+        </div>
+        <!-- Add more Pokémon entries here -->
+    </div>
+</section>
+{% endblock %}

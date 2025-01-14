@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Mi Web{% endblock %}</title>
+    <title>Pokemon Themed Website</title>
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <header>
-        <h1>Fútbol Europeo</h1>
+        <h1>Welcome to the Pokemon World</h1>
         <nav>
-            <a href="/">Inicio</a>
-            <a href="/equipos">Equipos</a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/pokedex">Pokedex</a></li>
+                <li><a href="/trainers">Trainers</a></li>
+                <li><a href="/battles">Battles</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+
+    {% block content %}
+    {% endblock %}
+
     <footer>
-        <p>© 2025 Mundo del Fútbol</p>
+        <p>&copy; 2025 Pokemon World. All rights reserved.</p>
     </footer>
 </body>
 </html>
