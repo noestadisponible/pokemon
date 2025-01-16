@@ -1,18 +1,27 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Battles</title>
+</head>
+<body>
+    <h1>Pokémon Battles</h1>
+    <ul>
+        {% for battle in battle_links %}
+            <li>
+                <h3>{{ battle.title }}</h3>
+                <iframe width="560" height="315" 
+                        src="https://www.youtube.com/embed/{{ battle.video_id }}" 
+                        title="{{ battle.title }}" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
 
-{% block content %}
-<section id="battles">
-    <h2>Battles</h2>
-    <p>Challenge other trainers and test your Pokémon's strength in epic battles.</p>
-    <div class="battles-arena">
-        <!-- Example Battle -->
-        <div class="battle-card">
-            <h3>Trainer Battle</h3>
-            <p>Trainer 1: Ash Ketchum</p>
-            <p>Trainer 2: Misty</p>
-            <p>Winner: Ash Ketchum</p>
-        </div>
-        <!-- Add more battles here -->
-    </div>
-</section>
-{% endblock %}
+
