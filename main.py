@@ -44,3 +44,4 @@ async def battles(request: Request):
     return templates.TemplateResponse("battles.html", {"request": request, "battle_links": battle_links})
 
 
+
