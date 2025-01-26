@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon Themed Website</title>
+    <title>{% block title %}Pokemon Themed Website{% endblock %}</title>
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
@@ -14,13 +14,15 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/pokedex">Pokedex</a></li>
                 <li><a href="/trainers">Trainers</a></li>
-                <li><a href="/battles">Battles</a></li>
+                <li><a href="/edit">Edit Pokemon</a></li>
             </ul>
         </nav>
     </header>
 
-    {% block content %}
-    {% endblock %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 
     <footer>
         <p>&copy; 2025 Pokemon World. All rights reserved.</p>

@@ -1,18 +1,22 @@
 {% extends "base.html" %}
 
+{% block title %}Pokedex - Pokemon Universe{% endblock %}
+
 {% block content %}
 <section id="pokedex">
-    <h2>Pokedex</h2>
-    <p>Discover detailed information about every Pokémon, including their types, abilities, and evolutions.</p>
+    <h2>Pokédex</h2>
+    <p>Explora información detallada de cada Pokémon.</p>
     <div class="pokedex-grid">
-
+        {% for pokemon in pokedex_list %}
         <div class="pokemon-card">
-            <img src="/static/images/pikachu.png" alt="Pikachu" class="pokemon-image">
-            <h3>Pikachu</h3>
-            <p>Type: Electric</p>
-            <p>Abilities: Static, Lightning Rod</p>
+            <!-- Ruta corregida para apuntar a 'static/imagenes' -->
+            <img src="/static/imagenes/{{ pokemon.imagen }}" alt="{{ pokemon.nombre }}" class="pokemon-image">
+            <h3>{{ pokemon.nombre }}</h3>
+            <p>{{ pokemon.descripcion }}</p>
         </div>
-        <!-- añadir pokemons -->
+        {% else %}
+        <p>No se encontraron Pokémon en la base de datos.</p>
+        {% endfor %}
     </div>
 </section>
 {% endblock %}
