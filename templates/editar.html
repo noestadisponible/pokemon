@@ -21,6 +21,9 @@
         <button type="submit">Añadir Pokémon</button>
     </form>
 
+    <!-- Espaciado debajo del formulario -->
+    <br><br>
+
     <!-- Listado de Pokémon con opciones de edición y eliminación -->
     <h3>Listado de Pokémon</h3>
     <table>
@@ -51,6 +54,10 @@
                     </form>
                 </td>
             </tr>
+            <!-- Línea de separación entre cada Pokémon -->
+            <tr>
+                <td colspan="5"><hr></td>
+            </tr>
             {% else %}
             <tr>
                 <td colspan="5">No hay Pokémon registrados.</td>
@@ -60,4 +67,5 @@
     </table>
 </section>
 {% endblock %}
+
 
