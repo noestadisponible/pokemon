@@ -55,5 +55,5 @@ jobs:
           push: true
           tags: | 
              ${{ secrets.USUARIO}}/pokemon:latest
-             ${{ secrets.PASSWORD }}/pokemon:${{ env.VERSION }}
+             ${{ secrets.USUARIO }}/pokemon:${{ env.VERSION }}
             
